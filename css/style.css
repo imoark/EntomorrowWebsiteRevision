@@ -7,7 +7,7 @@ This is Bootstrap SCSS
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Poppins|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Poppins|Raleway:400,500,700");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7916,21 +7916,265 @@ body {
 section {
   margin-top: 2em; }
 
+.container-95 {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.linedecaration {
+  position: relative; }
+
+.linedecaration:after {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  content: '';
+  background: #249384; }
+
+.fontstyle h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 5px; }
+
+.fontstyle h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 1.8; }
+
+@media screen and (max-width: 763px) {
+  .fontstyle h2 {
+    font-size: 0.6em; }
+  .fontstyle h3 {
+    font-size: 0.9em; }
+  .fontstyle p {
+    font-size: 1em; } }
+
+@media screen and (max-width: 992px) and (min-width: 763px) {
+  .fontstyle h2 {
+    font-size: 0.6em; }
+  .fontstyle h3 {
+    font-size: 0.9em; }
+  .fontstyle p {
+    font-size: 1em; } }
+
+@media screen and (min-width: 992px) {
+  .fontstyle h2 {
+    font-size: 0.7em; }
+  .fontstyle h3 {
+    font-size: 1.2em; }
+  .fontstyle p {
+    font-size: 1.3em; } }
+
 /* MICHIKA CODE*/
+.navbar .menu-icon {
+  display: none; }
+
+/* menu btn */
+.navbar .menu-btn {
+  display: none; }
+
+@media screen and (max-width: 576px) {
+  .sticky-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020; }
+  /* menu icon */
+  .navbar .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  .navbar .menu-icon .navicon {
+    background: #249384;
+    display: block;
+    height: 2px;
+    position: relative;
+    -webkit-transition: background .2s ease-out;
+    -o-transition: background .2s ease-out;
+    transition: background .2s ease-out;
+    width: 18px; }
+  .navbar .menu-icon .navicon:before,
+  .navbar .menu-icon .navicon:after {
+    background: #249384;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    width: 100%; }
+  .navbar .menu-icon .navicon:before {
+    top: 5px; }
+  .navbar .menu-icon .navicon:after {
+    top: -5px; }
+  /* menu btn */
+  .navbar .menu-btn {
+    display: none; }
+  .navbar .menu-btn:checked ~ .nav {
+    max-height: 100%;
+    width: 100%; }
+  .navbar .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent; }
+  .navbar .menu-btn:checked ~ .menu-icon .navicon:before {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .navbar .menu-btn:checked ~ .menu-icon .navicon:after {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0; }
+  /* menu */
+  nav ul.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #212529;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: -9;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  header li {
+    float: none;
+    width: 100%; }
+  nav .nav {
+    clear: both;
+    max-height: 0;
+    -webkit-transition: max-height .2s ease-out;
+    -o-transition: max-height .2s ease-out;
+    transition: max-height .2s ease-out; }
+  nav .nav li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none; }
+  nav .nav li a:hover,
+  nav .nav .menu-btn:hover {
+    color: #249384; } }
+
 /* MICHIKA CODE*/
-img {
+#team img {
   max-width: 100%; }
 
-section#ted h2 {
-  text-align: center; }
+#team h3 {
+  margin-bottom: 10%; }
 
-section#ted iframe {
-  margin-bottom: 1em;
-  min-height: 315px !important; }
+@media screen and (max-width: 763px) {
+  #team h2 {
+    margin-top: 4%; } }
+
+#team #member {
+  margin-top: 2%; }
+  #team #member .team-item {
+    position: relative;
+    text-align: center; }
+  #team #member .team-image {
+    position: relative;
+    overflow: hidden; }
+  #team #member .team-image img {
+    width: auto;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.9);
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.9); }
+  #team #member .team-image:after {
+    position: absolute;
+    background: transparent;
+    content: " ";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  #team #member .team-detail {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    padding: 20px; }
+  #team #member .team-social a {
+    color: #aaa;
+    padding: 30px 40px;
+    font-size: 20px; }
+  #team #member .team-social.roshan a {
+    padding: 9% 9%; }
+  #team #member .team-social a:hover {
+    color: #FFF;
+    text-decoration: none; }
+  #team #member .team-descr {
+    margin: 20px 0 0; }
+  #team #member .team-name {
+    font-size: 1.2em;
+    color: #111; }
+  #team #member .team-role {
+    font-size: 0.9em;
+    color: #484848; }
+  #team #member .team-item:hover .team-image:after {
+    background: rgba(0, 0, 0, 0.6); }
+  #team #member .team-item:hover .team-detail {
+    opacity: 1;
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease; }
+  #team #member .team-item .team-detail {
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease; }
 
 /* MICHIKA CODE*/
-#social h2 {
-  text-align: center; }
+#ted iframe {
+  margin-bottom: 1em;
+  min-height: 315px !important;
+  width: 49%;
+  padding: 0; }
+  @media screen and (max-width: 763px) {
+    #ted iframe {
+      width: 100%; } }
+
+/* MICHIKA CODE*/
+#social h3 {
+  margin-bottom: 5%; }
 
 #social .instagram img {
   margin-bottom: 5%; }
@@ -7940,13 +8184,23 @@ section#ted iframe {
 
 /* MICHIKA CODE*/
 footer .partner {
-  text-align: center; }
+  margin-bottom: 2%; }
+  footer .partner h3 {
+    margin-bottom: 5%; }
   footer .partner img {
-    max-width: 30%;
+    max-width: 80%;
     height: auto; }
 
+@media screen and (max-width: 576px) {
+  footer .partner .col-6 {
+    margin-bottom: 10%; } }
+
 footer .copyright {
-  text-align: center; }
+  text-align: center;
+  background-color: #212529;
+  color: #f8f9fa;
+  padding-top: 1%;
+  padding-bottom: 1%; }
 
 /* 
 // Header CSS - Mario
@@ -7954,11 +8208,44 @@ footer .copyright {
 // Start of Header CSS
 //  
 */
+/* Variables */
+/* Mixins */
 #banner {
-  height: -webkit-calc(100vh - 55px);
-  height: calc(100vh - 55px);
+  height: 100vh;
   background-color: #8CA2A2;
+  position: relative;
+  -webkit-animation: bgFadeIn 3s ease-in both;
+          animation: bgFadeIn 3s ease-in both;
   position: relative; }
+  #banner:before {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/img/banner-image.jpg");
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/banner-image.jpg");
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/banner-image.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/banner-image.jpg");
+    background-color: #CCCCCC;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    bottom: 0;
+    content: ' ';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1; }
+
+@-webkit-keyframes bgFadeIn {
+  0% {
+    background-color: #8ca2a2; }
+  100% {
+    background-color: rgba(140, 162, 162, 0); } }
+
+@keyframes bgFadeIn {
+  0% {
+    background-color: #8ca2a2; }
+  100% {
+    background-color: rgba(140, 162, 162, 0); } }
 
 nav {
   height: 55px; }
@@ -7976,7 +8263,10 @@ ul.navbar-nav {
   color: #f8f9fa;
   font-size: 0.875rem; }
   ul.navbar-nav li {
-    margin-left: 2em; }
+    margin-left: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8em; }
 
 svg#main-logo {
   display: inline-block;
@@ -7992,7 +8282,7 @@ svg#main-logo {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     svg#main-logo {
       -webkit-animation-name: logo-move-up;
               animation-name: logo-move-up;
@@ -8019,8 +8309,9 @@ header h1.logo-title {
   margin: 0;
   height: 100%;
   vertical-align: middle;
-  margin-top: 17%; }
-  @media only screen and (max-width: 768px) {
+  margin-top: 17%;
+  color: #f8f9fa; }
+  @media only screen and (max-width: 576px) {
     header h1.logo-title {
       text-align: center;
       -webkit-animation-name: title-move-up;
@@ -8032,6 +8323,9 @@ header h1.logo-title {
   height: 226px; }
   .wrap-center .col-md-6 {
     padding: 0; }
+  @media only screen and (max-width: 576px) {
+    .wrap-center {
+      width: 100%; } }
 
 @media only screen and (min-width: 768px) {
   .row .col-title-logo {
@@ -8118,7 +8412,25 @@ header h1.logo-title {
   padding: 2em 0 3em 0;
   color: #fff; }
   #problem h1 {
+    display: block; }
+  #problem h2 {
+    display: block; }
+  #problem img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block; }
+  #problem .desc {
+    margin-top: 1em;
     text-align: center; }
+    #problem .desc h2 {
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      font-size: 1rem;
+      margin: 0 3em; }
+  #problem .problem-wrapper {
+    margin-top: 2em; }
 
 .cmp-image {
   text-align: center; }
